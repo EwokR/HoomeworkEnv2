@@ -1,4 +1,4 @@
-public class Car extends Vehicle implements ServiceTire, ServiceEngine {
+public class Car extends Vehicle implements ServiceTire, ServiceEngine, Check {
     private String modelName;
     private int wheelsCount;
 
@@ -6,6 +6,14 @@ public class Car extends Vehicle implements ServiceTire, ServiceEngine {
         super(modelName, wheelsCount);
     }
 
+    @Override
+    public void check() {
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
+        }
+        checkEngine();
+    }
     @Override
     public void updateTyre() {
         System.out.println("Меняем покрышку");
