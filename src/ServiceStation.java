@@ -1,8 +1,7 @@
-public class ServiceStation  implements Check{
+public class ServiceStation {
 
-    @Override
-    public void check() {
-
+    public void service(Check check){
+        check.check();
     }
 }
 
