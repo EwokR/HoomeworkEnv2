@@ -1,7 +1,4 @@
 public class Truck extends Vehicle implements ServiceTire, ServiceEngine, ServiceTrailer, Check {
-    private String modelName;
-    private int wheelsCount;
-
     public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }

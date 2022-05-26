@@ -1,6 +1,4 @@
 public class Car extends Vehicle implements ServiceTire, ServiceEngine, Check {
-    private String modelName;
-    private int wheelsCount;
 
     public Car(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
